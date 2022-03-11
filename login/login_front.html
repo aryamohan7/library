@@ -1,0 +1,54 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="librarySystem.login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: x-large;
+        }
+        .auto-style2 {
+            margin-left: 360px;
+        }
+        .auto-style3 {
+            font-size: large;
+            margin-left: 360px;
+        }
+        .auto-style4 {
+            margin-left: 100px;
+        }
+    </style>
+        <link href="style1.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+
+            <p class="auto-style2">
+                <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login Form</strong></p>
+            <p class="auto-style3">
+                Email:-&nbsp;
+                <asp:TextBox ID="TextBox1" runat="server" Height="33px" Width="284px"></asp:TextBox>
+            </p>
+            <p class="auto-style3">
+                Password:-
+                <asp:TextBox ID="TextBox2" runat="server" Height="26px" Width="282px" TextMode="Password"></asp:TextBox>
+            </p>
+            <p class="auto-style3">
+                &nbsp;</p>
+            <p class="auto-style3">
+                <asp:Button ID="Button1" runat="server" CssClass="auto-style4" OnClick="Button1_Click" Text="Login" Width="228px" />
+            </p>
+            <p class="auto-style3">
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </p>
+            <p class="auto-style3">
+                &nbsp;</p>
+
+        </div>
+    </form>
+</body>
+</html>

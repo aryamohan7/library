@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace librarySystem
+{
+    public partial class studentRegisterForm : System.Web.UI.Page
+    {
+       
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+       
+
+      
+
+
+        protected void btnReg_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-37LH6UL;Initial Catalog=librarySystem;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[userreg]
+           ([name]
+           ,[address]
+           ,[gender]
+           ,[phone]
+           ,[email]
+           ,[department]
+           ,[password])
+     VALUES
+           ('"+txtName.Text+"','"+txtAdd.Text+"','"+DropDownList1.SelectedItem+"','"+txtPhone.Text+"','"+txtEmail.Text+"','"+DropDownList2.SelectedItem+"','"+txtPass.Text+"')",con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('Register sucessfully')</script>");
+            Response.Redirect("login.aspx");
+
+        }
+
+
+
+
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
+    }
+}
